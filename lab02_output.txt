@@ -1,0 +1,45 @@
+﻿== Part A: curve ==
+G on curve : True
+2G x       : c6047f9441ed7d6d3045406e95c07cd85c778e4b8cef3ca7abac09b95c709ee5
+n*G = O    : True
+P+(-P) = O : True
+ladder == double-and-add: True
+SEC1 round trip: True
+
+== Part B: ECDSA ==
+address    : 0x97a10005a72997fa009eA4366B38702A3A2f500F
+verify     : True
+(r, n-s) also verifies: True
+deterministic: True
+recover pubkey: True
+identical r: True
+original d : 0xc0ffee00112233445566778899aabbccddeeff00112233445566778899aabbcc
+recovered d: 0xc0ffee00112233445566778899aabbccddeeff00112233445566778899aabbcc -> match: True
+
+== Part C: HD wallet ==
+seed       : 5eb00bbddcf06908...
+m/44'/60'/0'/0/0: 0x9858EfFD232B4033E47d90003D41EC34EcaEda94
+m/44'/60'/0'/0/1: 0x6Fac4D18c912343BF86fa7049364Dd4E424Ab9C0
+m/44'/60'/0'/0/2: 0xb6716976A3ebe8D39aCEB04372f22Ff8e6802D7A
+passphrase 'correct horse'  : 0xFf0Bdf99513306994d4aF9949BA7cfA60204D285
+passphrase 'correct horse ' : 0x67dA015b6A80F19822e5d270A7788F72f018a724
+parent key recovered from child + xpub: True
+watch-only derivation matches: True
+hardened refused: hardened child: I_L cannot be computed without the parent private key
+
+== Part D: post-quantum cost ==
+scheme                  pk   sig   tx B  x ECDSA    tps
+ECDSA (secp256k1)       33    72    215     1.0x   7.75
+Schnorr (BIP-340)       32    64    206     1.0x   8.09
+FN-DSA-512             897   666   1673     7.8x   1.00
+ML-DSA-44             1312  2420   3842    17.9x   0.43
+ML-DSA-65             1952  3309   5371    25.0x   0.31
+SLH-DSA-128s            32  7856   7998    37.2x   0.21
+
+Exposure report:
+  p2pkh_unspent         PROTECTED  only HASH160(pubkey) is public until the coin is spent
+  p2pk                  EXPOSED    the full public key sits in the output
+  reused_address        EXPOSED    an earlier spend already revealed the public key
+  mempool_transaction   EXPOSED    the spend reveals the key while it waits for confirmation
+  ethereum_any_active   EXPOSED    ecrecover derives the public key from any past signature
+

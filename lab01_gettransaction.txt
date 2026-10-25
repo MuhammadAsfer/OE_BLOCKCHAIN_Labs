@@ -1,0 +1,63 @@
+﻿{
+  "amount": 0.00000000,
+  "fee": -0.00010000,
+  "confirmations": 2,
+  "blockhash": "75fbfceb53b068f4ea64ea9243df23af236d520be6fc00465616c855075577ac",
+  "blockheight": 102,
+  "blockindex": 1,
+  "blocktime": 1792928920,
+  "txid": "b95d32f37c0aee53c76e9abb90546663f9c7e228d3fc67badb3f2cd0c3e8d2b5",
+  "wtxid": "dd709d1d3d4d82ca5c1d6c77d9fd3e780f291a172cd9f771063d54e96876a76d",
+  "walletconflicts": [
+  ],
+  "time": 1792928899,
+  "timereceived": 1792928899,
+  "bip125-replaceable": "no",
+  "details": [
+    {
+      "address": "bcrt1qykcndwxvnlvq8nq3h4q3t9pwvmw8lm0vnylts3",
+      "category": "send",
+      "amount": -10.00000000,
+      "label": "destination",
+      "vout": 0,
+      "fee": -0.00010000,
+      "abandoned": false
+    },
+    {
+      "address": "bcrt1qh5np6d0l0wh4eclj9v6e9klaerae79pu499enl",
+      "category": "send",
+      "amount": -39.99990000,
+      "label": "change",
+      "vout": 1,
+      "fee": -0.00010000,
+      "abandoned": false
+    },
+    {
+      "address": "bcrt1qykcndwxvnlvq8nq3h4q3t9pwvmw8lm0vnylts3",
+      "parent_descs": [
+        "wpkh(tpubD6NzVbkrYhZ4XVWwRqhbZzvfsEJp3HNYqp94Hvf2twLtTq7u1wxeho7g6RFQy9Y6sj1wkpjPDxsWYPKxMjuhWhD2eEkZ555jxMDoaExrZXm/84h/1h/0h/0/*)#l8s5srn5"
+      ],
+      "category": "receive",
+      "amount": 10.00000000,
+      "label": "destination",
+      "vout": 0,
+      "abandoned": false
+    },
+    {
+      "address": "bcrt1qh5np6d0l0wh4eclj9v6e9klaerae79pu499enl",
+      "parent_descs": [
+        "wpkh(tpubD6NzVbkrYhZ4XVWwRqhbZzvfsEJp3HNYqp94Hvf2twLtTq7u1wxeho7g6RFQy9Y6sj1wkpjPDxsWYPKxMjuhWhD2eEkZ555jxMDoaExrZXm/84h/1h/0h/0/*)#l8s5srn5"
+      ],
+      "category": "receive",
+      "amount": 39.99990000,
+      "label": "change",
+      "vout": 1,
+      "abandoned": false
+    }
+  ],
+  "hex": "020000000001017a1c2d74cafe9f5debb0d1ce90971e8d332fb6f4263cc0ddcc2ca81fedc3fbac0000000000fdffffff0200ca9a3b0000000016001425b136b8cc9fd803cc11bd4115942e66dc7fedecf0006bee00000000160014bd261d35ff7baf5ce3f22b3592dbfdc8fb9f143c0247304402200b5b45611155fef8016925a55235e341be5a8bd58c1c0110ad50a3c997fa22b102203a177e880bc5761f14de299d1aab7d49a44f52439e3eb40e9edca0c54a0e24780121029df6882963c5dbdc3097ba155841deb451a85c0e65b0280ef1d2739fa8a5533400000000",
+  "lastprocessedblock": {
+    "hash": "7c42102616edea8e9f470bc88fd35fbd162456a8db400c66b2aa2f7d950cb15d",
+    "height": 103
+  }
+}
